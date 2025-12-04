@@ -1,0 +1,589 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(img/BackgroundVolumetric.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: sticky;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 500px;
+    background-image: linear-gradient(180deg, #010002, #01000275, #01000200);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    transition: all 0.4s ease;
+    filter: brightness(0) invert(1) saturate(0); /* Membuat gambar putih */
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+    filter: none; /* Kembali ke warna asli */
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 7px;
+}
+
+.nav-links a {
+    display: block;
+    padding: 31px 16px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #cd45ff;
+}
+
+.nav-links a:hover::after {
+    width: calc(100% - 32px);
+}
+
+/* Hero Section */
+.hero {
+    height: calc(100vh - 2px); /* Kompensasi untuk border */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    text-align: center;
+    max-width: 1200px; /* Diperlebar dari 1000px */
+    width: 90%; /* Ganti dari 100% ke 90% untuk padding otomatis */
+    padding: 0 1%; /* Padding responsif */
+    margin: 0;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+}
+
+/* Teks di tengah */
+.hero-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0; /* Pastikan tidak ada margin */
+}
+
+.hero-content p {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    font-size: 18px;
+}
+
+.get-started {
+    line-height: 80px;
+    padding: 12px 30px;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    border: 3px solid #9f29ff;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.get-started:hover {
+    background-color: #9f29ff;
+    box-shadow: #9f29ff9d 0px 0px 15px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+#about {
+    background-image: url(img/BackgroundVolumetric1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: sticky;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.section-content {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0 20px;
+    
+    /* Tetap seperti semula */
+    /* HAPUS flexbox dari sini */
+}
+
+/* Atur layout dengan grid untuk 2 kolom */
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Kolom 1 untuk teks, kolom 2 untuk logo */
+    align-items: start;
+    gap: -10px;
+}
+
+/* Semua elemen teks berada di kolom pertama */
+.section-title1,
+.desc1,
+.desc2 {
+    grid-column: 1;
+}
+
+/* Logo di kolom kedua */
+.logo-hover {
+    width: 350px; /* Ukuran logo */
+    height: auto;
+    margin-top: 0;
+    grid-column: 2;
+    grid-row: 1 / span 3; /* Logo akan mencakup beberapa baris */
+    align-self: center; /* Tengah secara vertikal */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo-hover:hover {
+    transform: translateY(-20px);
+}
+
+.section-title1 {
+    font-size: 75px;
+    font-weight: 900;
+    text-align: left;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    position: relative;
+    padding-bottom: 1px;
+    margin-top: 0;
+    width: 100%; /* Ubah dari fit-content ke 100% */
+}
+
+.section-title1::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Ubah dari 50% ke 0 */
+    bottom: 0;
+    transform: none; /* Hapus transform */
+    width: 40%;
+    height: 6px;
+    background: linear-gradient(90deg, #9522ff, #f85fff);
+    border-radius: 100px;
+}
+
+.desc1 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.desc2 {
+    font-size: 16px;
+    margin-top: 17px;
+    font-weight: 600;
+    text-align: left;
+    width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+    .section-content {
+        gap: 10px;
+    }
+    
+    .logo-hover {
+        width: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-content {
+        grid-template-columns: 1fr; /* 1 kolom untuk mobile */
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .logo-hover {
+        grid-column: 1;
+        grid-row: auto;
+        width: 200px;
+        justify-self: center; /* Pusatkan logo */
+        margin-bottom: 20px;
+    }
+    
+    .section-title1,
+    .desc1,
+    .desc2 {
+        text-align: center;
+    }
+    
+    .section-title1::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title1 {
+        font-size: 50px;
+    }
+    
+    .desc1 {
+        font-size: 18px;
+    }
+    
+    .logo-hover {
+        width: 150px;
+    }
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.footer-text {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-text {
+        background-color: transparent !important;
+    }
+}
+
+/* Active state for hamburger menu */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== BLUR EFFECT FOR NAVIGATION ON SCROLL ===== */
+nav.scrolled {
+    background: #ffffff15 !important;
+    backdrop-filter: blur(9px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav.scrolled .nav-links a {
+    color: white;
+}
+
+nav.scrolled .nav-links a::after {
+    background-color: white;
+}
+
+nav.scrolled .hamburger .bar {
+    background-color: white;
+}
+
+/* Ensure smooth scrolling accounts for fixed nav */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1400px) {
+    nav {
+        padding: 0 200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav {
+        padding: 0 100px;
+    }
+    
+    .nav-links a {
+        font-size: 17px;
+        padding: 30px 12px;
+    }
+    
+    .hero-content h1 {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 0 50px;
+    }
+    
+    .nav-links a {
+        font-size: 16px;
+        padding: 30px 10px;
+    }
+    
+    .hero-content h1 {
+        font-size: 100px;
+    }
+    
+    .hero-content h2 {
+        font-size: 35px;
+    }
+    
+    .hero-content p {
+        font-size: 22px;
+    }
+    
+    .hero-content .btn {
+        font-size: 22px;
+    }
+    
+    .section-title1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 20px;
+        flex-wrap: nowrap;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.781);
+        flex-direction: column;
+        display: none;
+        padding: 80px 0 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        text-align: center;
+        font-size: 24px;
+        padding: 25px 16px;
+        width: 100%;
+        font-weight: 400;
+    }
+
+    .nav-links a::after {
+        bottom: 15px;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 0, 110, 0.8);
+    }
+    
+    /* Hero content mobile adjustments */
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 0 auto;
+        padding: 120px 20px 60px;
+        text-align: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content p {
+        font-size: 19px;
+        margin-top: -15px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+    
+    .hero-content .btn {
+        font-size: 18px;
+        padding: 12px 30px;
+        margin-top: 10px;
+    }
+    
+    .section-spacing {
+        padding-top: 60px !important;
+    }
+    
+    html {
+        scroll-padding-top: 60px;
+    }
+    
+    nav.scrolled .nav-links {
+        background-color: rgba(0, 0, 0, 0.9) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        padding: 0 15px;
+    }
+    
+    .hero-content {
+        padding: 100px 15px 40px;
+    }
+    
+    .hero-content h2 {
+        font-size: 39px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+    
+    .hero-content .btn {
+        font-size: 16px;
+        margin-top: 7px;
+        padding: 5px 15px;
+    }
+    
+    .nav-links a {
+        font-size: 20px;
+        padding: 20px 16px;
+    }
+    
+    .section-spacing {
+        padding-top: 50px !important;
+    }
+    
+    html {
+        scroll-padding-top: 50px;
+    }
+    
+    .section-title1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 40px;
+    }
+    
+    .hero-content h2 {
+        font-size: 18px;
+    }
+    
+    .hero-content p {
+        font-size: 15px;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+}
