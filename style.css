@@ -2049,10 +2049,7 @@ nav {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
     text-transform: uppercase;
-    background: linear-gradient(0deg, #9522ff, #f85fff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f85fff;
     font-size: 20px;
 }
 
@@ -2503,3 +2500,4 @@ html {
         width: 35px;
     }
 }
+
