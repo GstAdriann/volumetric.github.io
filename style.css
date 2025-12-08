@@ -395,7 +395,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 60px;
 }
 
 /* Grid Row */
@@ -464,6 +463,46 @@ nav {
 .grid-item:hover .grid-image {
     filter: brightness(1.2) saturate(1.1);
     transform: scale(1.1);
+}
+
+.totalgame-visits {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    align-items: center; /* Untuk penataan vertikal */
+    justify-content: center; /* Untuk penataan horizontal */
+    text-align: center; /* Untuk teks rata tengah */
+}
+
+.totalgame-amount {
+    font-size: 35px;
+    background-image: linear-gradient(180deg, #9522ff, #f85fff);
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin-left: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.totalgame-amount:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 35px rgba(149, 34, 255, 0.4),
+        0 5px 15px rgba(248, 95, 255, 0.3);
+    background-image: linear-gradient(180deg, #a43aff, #ff6eff);
+}
+
+.totalgame-title {
+    /* Hapus margin-left karena sekarang sudah diatur tengah */
+    margin-top: 10px;
+    font-size: 18px;
+    color: rgb(216, 216, 216);
+    margin-left: 0; /* Reset margin kiri */
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -535,7 +574,7 @@ nav {
     }
     
     .title-contribute {
-        font-size: 15px;
+        font-size: 12px;
     }
     
     .subtitle {
@@ -770,11 +809,11 @@ nav {
     }
     
     .desc1 {
-        font-size: 15px;
+        font-size: 13px;
     }
     
     .desc2 {
-        font-size: 14px;
+        font-size: 11px;
     }
     
     .all-teams {
@@ -1262,6 +1301,7 @@ nav {
     -webkit-backdrop-filter: blur(8px);
     min-height: 450px;
     display: flex;
+    height: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -1404,186 +1444,6 @@ nav {
     color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .services-container {
-        gap: 25px;
-        max-width: 1000px;
-    }
-    
-    .services-card1 {
-        padding: 35px 25px;
-        min-height: 420px;
-        border-radius: 18px;
-    }
-    
-    .services-title {
-        font-size: 4rem;
-        margin-bottom: 80px;
-    }
-    
-    .services-title span {
-        font-size: 2.5rem;
-    }
-    
-    .services-cr-title {
-        font-size: 1.5rem;
-    }
-    
-    .services-card1 img {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-@media (max-width: 992px) {
-    .services-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-    
-    .services-container .services-card1:nth-child(2) {
-        transform: translateY(-15px);
-    }
-    
-    .services-card1 {
-        padding: 30px 20px;
-        min-height: 400px;
-        border-radius: 16px;
-    }
-    
-    .services-card1:nth-child(2):hover {
-        transform: translateY(-25px) scale(1.02);
-    }
-    
-    .services-card1 img {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 25px;
-    }
-    
-    .services-cr-title {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
-    }
-    
-    .desc-services {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-    
-    .services-title {
-        font-size: 3.5rem;
-        margin-bottom: 70px;
-    }
-    
-    .services-title span {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .services-container {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        gap: 25px;
-    }
-    
-    /* Reset card tengah di mobile */
-    .services-container .services-card1:nth-child(2) {
-        transform: translateY(0);
-    }
-    
-    .services-card1 {
-        padding: 35px 30px;
-        min-height: auto;
-        border-radius: 18px;
-    }
-    
-    .services-card1:nth-child(2):hover {
-        transform: translateY(-10px) scale(1.02);
-    }
-    
-    .services-title {
-        font-size: 3rem;
-        margin-bottom: 60px;
-    }
-    
-    .services-title span {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .services-section-content {
-        padding: 0 15px;
-    }
-    
-    .services-container {
-        gap: 20px;
-    }
-    
-    .services-card1 {
-        padding: 30px 25px;
-        border-radius: 16px;
-    }
-    
-    .services-card1 img {
-        width: 75px;
-        height: 75px;
-        margin-bottom: 20px;
-    }
-    
-    .services-cr-title {
-        font-size: 1.3rem;
-    }
-    
-    .desc-services {
-        font-size: 0.9rem;
-    }
-    
-    .services-title {
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-    }
-    
-    .services-title span {
-        font-size: 1.8rem;
-    }
-    
-    #services {
-        padding: 80px 0;
-    }
-}
-
-@media (max-width: 400px) {
-    .services-card1 {
-        padding: 25px 20px;
-        border-radius: 14px;
-    }
-    
-    .services-card1 img {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .services-cr-title {
-        font-size: 1.2rem;
-    }
-    
-    .desc-services {
-        font-size: 0.85rem;
-    }
-    
-    .services-title {
-        font-size: 2.2rem;
-    }
-    
-    .services-title span {
-        font-size: 1.6rem;
-    }
-}
-
 /* Animasi fade-in untuk cards */
 @keyframes fadeInUp {
     from {
@@ -1606,6 +1466,285 @@ nav {
 .services-card1:nth-child(2) { animation-delay: 0.2s; }
 .services-card1:nth-child(3) { animation-delay: 0.3s; }
 
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet Landscape (1024px ke bawah) */
+@media screen and (max-width: 1024px) {
+    .services-container {
+        gap: 25px;
+        max-width: 900px;
+    }
+    
+    .services-card1 {
+        padding: 25px 20px;
+        min-height: 420px;
+        border-radius: 40px;
+    }
+    
+    .services-card1 img {
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 25px;
+    }
+    
+    .services-cr-title {
+        font-size: 1.6rem;
+    }
+    
+    .desc-services {
+        font-size: 0.95rem;
+    }
+    
+    .desc-services1,
+    .list-services {
+        font-size: 0.85rem;
+    }
+}
+
+/* Tablet Portrait (768px ke bawah) */
+@media screen and (max-width: 768px) {
+    #services {
+        padding: 70px 0;
+        min-height: auto;
+    }
+    
+    .services-section-content {
+        padding: 0 20px;
+    }
+    
+    .services-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+    
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 100%;
+    }
+    
+    /* Atur posisi card agar sejajar */
+    .services-container .services-card1 {
+        transform: translateY(0) !important;
+        align-self: stretch;
+    }
+    
+    /* Jika ada 3 card, buat card ketiga berada di tengah di baris kedua */
+    .services-container .services-card1:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        max-width: 400px;
+        width: 100%;
+    }
+    
+    .services-card1 {
+        padding: 25px 20px;
+        min-height: 380px;
+        border-radius: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .services-card1 img {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto 20px;
+    }
+    
+    .services-cr-title {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .desc-services {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .desc-services1,
+    .list-services {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+}
+
+/* Mobile (600px ke bawah) */
+@media screen and (max-width: 600px) {
+    #services {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+    
+    .services-title {
+        font-size: 1.6rem;
+        margin-bottom: 35px;
+    }
+    
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    /* Reset grid column untuk semua card */
+    .services-container .services-card1 {
+        grid-column: auto;
+        max-width: 100%;
+    }
+    
+    .services-card1 {
+        padding: 25px 20px;
+        min-height: auto;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Berikan margin bottom yang konsisten untuk semua card */
+    .services-container .services-card1:not(:last-child) {
+        margin-bottom: 0;
+    }
+    
+    .services-card1 img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto 20px;
+    }
+    
+    .services-cr-title {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .desc-services {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        margin-top: 10px;
+        line-height: 1.5;
+    }
+    
+    .desc-services1,
+    .list-services {
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    /* Optimalkan hover effects untuk mobile */
+    .services-card1:hover {
+        transform: translateY(-5px) scale(1.02);
+    }
+    
+    .services-card1:hover img {
+        transform: scale(1.05);
+    }
+}
+
+/* Small Mobile (480px ke bawah) */
+@media screen and (max-width: 480px) {
+    #services {
+        padding: 50px 0;
+    }
+    
+    .services-section-content {
+        padding: 0 15px;
+    }
+    
+    .services-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .services-container {
+        gap: 25px;
+        max-width: 100%;
+    }
+    
+    .services-card1 {
+        min-height: auto;
+        margin-left: -20px;
+        border-radius: 25px;
+    }
+    
+    .services-card1 img {
+        max-width: 180px;
+        margin-bottom: 18px;
+    }
+    
+    .services-cr-title {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .desc-services {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    .desc-services1,
+    .list-services {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    .all-services-list {
+        padding-left: 20px;
+    }
+}
+
+/* Extra Small Mobile (360px ke bawah) */
+@media screen and (max-width: 360px) {
+    #services {
+        padding: 40px 0;
+    }
+    
+    .services-section-content {
+        padding: 0 12px;
+    }
+    
+    .services-title {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+    
+    .services-container {
+        gap: 20px;
+    }
+    
+    .services-card1 {
+        padding: 20px 15px;
+        border-radius: 22px;
+    }
+    
+    .services-card1 img {
+        max-width: 150px;
+        margin-bottom: 15px;
+    }
+    
+    .services-cr-title {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .desc-services {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+    
+    .desc-services1,
+    .list-services {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}
+
 /* ===== PARTNERS SECTION ===== */
 
 /* Grid Container */
@@ -1613,7 +1752,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 60px;
 }
 
 /* Grid Row */
@@ -1635,6 +1773,11 @@ nav {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.grid-item1:hover {
+    transform: translateY(-15px);
 }
 
 /* Grid Image */
@@ -1644,6 +1787,108 @@ nav {
     height: 100%;
     object-fit: contain;
     transition: all 0.4s ease;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablet Landscape (1024px ke bawah) */
+@media screen and (max-width: 1024px) {
+    .grid-row1 {
+        gap: 60px;
+    }
+
+    .title-contribute {
+        font-size: 22px;
+    }
+    
+    .grid-item1 {
+        max-width: 140px;
+        height: 140px;
+    }
+}
+
+/* Tablet Portrait (768px ke bawah) */
+@media screen and (max-width: 768px) {
+    .grid-row1 {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    
+    .grid-item1 {
+        max-width: 130px;
+        height: 130px;
+        flex: 0 0 calc(33.333% - 40px);
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile (600px ke bawah) */
+@media screen and (max-width: 600px) {
+    .grid-row1 {
+        gap: 30px;
+    }
+    
+    .grid-item1 {
+        max-width: 120px;
+        height: 120px;
+        flex: 0 0 calc(33.333% - 30px);
+        border-radius: 18px;
+    }
+    
+    .grid-item1:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Mobile (480px ke bawah) */
+@media screen and (max-width: 480px) {
+    .grid-row1 {
+        gap: 25px;
+    }
+
+    .title-contribute {
+        margin-top: 20px;
+        font-size: 13px;
+    }
+    
+    .grid-item1 {
+        max-width: 110px;
+        height: 110px;
+        flex: 0 0 calc(33.333% - 25px);
+        border-radius: 16px;
+    }
+}
+
+/* Small Mobile (360px ke bawah) */
+@media screen and (max-width: 360px) {
+    .grid-row1 {
+        gap: 20px;
+    }
+    
+    .grid-item1 {
+        max-width: 100px;
+        height: 100px;
+        flex: 0 0 calc(33.333% - 20px);
+        border-radius: 14px;
+    }
+    
+    .grid-item1:hover {
+        transform: translateY(-8px);
+    }
+}
+
+/* Extra Small Mobile (320px ke bawah) */
+@media screen and (max-width: 320px) {
+    .grid-row1 {
+        gap: 15px;
+    }
+    
+    .grid-item1 {
+        max-width: 90px;
+        height: 90px;
+        flex: 0 0 calc(33.333% - 15px);
+        border-radius: 12px;
+    }
 }
 
 /* ===== CONTACTS SECTION ===== */
@@ -1846,6 +2091,139 @@ nav {
     font-size: 15px;
     font-weight: 400;
     margin-top: auto; /* Ini akan push copyright ke bawah */
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+/* Tablet (768px ke bawah) */
+@media screen and (max-width: 768px) {
+    .container-two-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .content1-contacts {
+        width: 94%;
+        padding: 20px;
+    }
+    
+    .content2-contacts {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .contacts-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .contact-us {
+        font-size: 18px;
+        margin-bottom: 80px;
+        padding: 10px 18px;
+    }
+    
+    .content2-contacts table {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .socialmedia-grid {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+}
+
+/* Mobile (480px ke bawah) */
+@media screen and (max-width: 480px) {
+    .contacts-section {
+        padding: 50px 15px;
+    }
+    
+    .contacts-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-us {
+        font-size: 16px;
+        margin-bottom: 60px;
+        padding: 8px 16px;
+    }
+    
+    .content1-contacts {
+        padding: 15px;
+    }
+    
+    .content2-contacts {
+        padding: 15px;
+    }
+    
+    .content1-title {
+        font-size: 18px;
+    }
+    
+    .content1-desc {
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .discord-btn {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+    
+    .title-table {
+        font-size: 16px;
+    }
+    
+    .button-table a,
+    .link-table a {
+        font-size: 15px;
+    }
+    
+    .copyright {
+        font-size: 13px;
+        width: 90%;
+    }
+    
+    .socialmedia-grid {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    
+    .socialmedia-grid i {
+        margin-right: 12px;
+    }
+    
+    .content2-contacts table {
+        width: 95%;
+    }
+}
+
+/* Small Mobile (360px ke bawah) */
+@media screen and (max-width: 360px) {
+    .contacts-section {
+        padding: 40px 10px;
+    }
+    
+    .contacts-title {
+        font-size: 22px;
+    }
+    
+    .contact-us {
+        font-size: 15px;
+        padding: 7px 14px;
+    }
+    
+    .content1-contacts,
+    .content2-contacts {
+        padding: 12px;
+    }
+    
+    .socialmedia-grid i {
+        margin-right: 8px;
+    }
 }
 
 /* ===== HAMBURGER MENU ===== */
@@ -2114,11 +2492,11 @@ html {
     }
     
     .hero-content h2 {
-        font-size: 18px;
+        font-size: 33px;
     }
     
     .hero-content p {
-        font-size: 15px;
+        font-size: 9px;
     }
     
     .logo img {
