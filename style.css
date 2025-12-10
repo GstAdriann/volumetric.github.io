@@ -4,7 +4,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 1px solid red; */
 }
 
 ::selection {
@@ -35,7 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== NAVIGATION ===== */
 nav {
     position: sticky;
     top: 0;
@@ -56,12 +54,12 @@ nav {
 .logo img {
     width: 50px;
     transition: all 0.4s ease;
-    filter: brightness(0) invert(1) saturate(0); /* Membuat gambar putih */
+    filter: brightness(0) invert(1) saturate(0);
 }
 
 .logo:hover img {
     transform: scale(1.1);
-    filter: none; /* Kembali ke warna asli */
+    filter: none;
 }
 
 .nav-links {
@@ -93,9 +91,8 @@ nav {
     width: calc(100% - 32px);
 }
 
-/* Hero Section */
 .hero {
-    height: calc(100vh - 2px); /* Kompensasi untuk border */
+    height: calc(100vh - 2px);
     background-image: url(img/BackgroundVolumetric.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,14 +117,13 @@ nav {
     color: white;
     font-family: 'DM Sans', sans-serif;
     text-align: center;
-    max-width: 1200px; /* Diperlebar dari 1000px */
-    width: 90%; /* Ganti dari 100% ke 90% untuk padding otomatis */
-    padding: 0 1%; /* Padding responsif */
+    max-width: 1200px;
+    width: 90%;
+    padding: 0 1%;
     margin: 0;
-    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+    box-sizing: border-box;
 }
 
-/* Teks di tengah */
 .hero-text {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 70px;
@@ -135,7 +131,7 @@ nav {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    margin: 0; /* Pastikan tidak ada margin */
+    margin: 0;
 }
 
 .hero-content p {
@@ -164,8 +160,6 @@ nav {
     background-color: #9f29ff;
     box-shadow: #9f29ff9d 0px 0px 15px;
 }
-
-/* ===== ADVANTAGE SECTION ===== */
 
 #grows {
     background-image: linear-gradient(0deg, #010002, #01000200);
@@ -209,7 +203,6 @@ nav {
     text-transform: uppercase;
 }
 
-/* Container untuk semua advantage */
 .advantages-container {
     display: flex;
     flex-wrap: wrap;
@@ -218,7 +211,6 @@ nav {
     width: 100%;
 }
 
-/* Style dasar untuk semua advantage */
 .advantage {
     background: transparent;
     border-radius: 15px;
@@ -234,7 +226,6 @@ nav {
     -webkit-backdrop-filter: blur(5px);
 }
 
-/* Efek glow border saat hover */
 .advantage::before {
     content: '';
     position: absolute;
@@ -266,7 +257,6 @@ nav {
     opacity: 1;
 }
 
-/* Efek garis bawah yang bergerak */
 .advantage::after {
     content: '';
     position: absolute;
@@ -312,7 +302,6 @@ nav {
     display: inline-block;
 }
 
-/* Efek teks glow */
 .advantage:hover .title-adv {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
@@ -329,8 +318,7 @@ nav {
     color: white;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 890px) {
     .advantages-container {
         flex-direction: column;
         align-items: center;
@@ -355,7 +343,6 @@ nav {
     }
 }
 
-/* ===== CONTRIBUTE SECTION ===== */
 #contribute {
     background-image: linear-gradient(0deg, #010002, #01000200);
 }
@@ -390,14 +377,12 @@ nav {
     position: relative;
 }
 
-/* Grid Container */
 .contributed-grid {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-/* Grid Row */
 .grid-row {
     display: flex;
     justify-content: center;
@@ -405,7 +390,6 @@ nav {
     flex-wrap: nowrap;
 }
 
-/* Grid Item */
 .grid-item {
     flex: 1;
     max-width: 150px;
@@ -421,7 +405,6 @@ nav {
     overflow: hidden;
 }
 
-/* Efek Hover Mewah untuk Grid Item */
 .grid-item::before {
     content: '';
     position: absolute;
@@ -450,7 +433,6 @@ nav {
     left: 100%;
 }
 
-/* Grid Image */
 .grid-image {
     width: 100%;
     height: auto;
@@ -471,9 +453,9 @@ nav {
     display: flex;
     flex-direction: column;
     margin-top: 35px;
-    align-items: center; /* Untuk penataan vertikal */
-    justify-content: center; /* Untuk penataan horizontal */
-    text-align: center; /* Untuk teks rata tengah */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .totalgame-amount {
@@ -497,14 +479,11 @@ nav {
 }
 
 .totalgame-title {
-    /* Hapus margin-left karena sekarang sudah diatur tengah */
     margin-top: 10px;
     font-size: 18px;
     color: rgb(216, 216, 216);
-    margin-left: 0; /* Reset margin kiri */
+    margin-left: 0;
 }
-
-/* ===== RESPONSIVE DESIGN ===== */
 
 @media (max-width: 1310px) {
     .grid-item {
@@ -514,7 +493,6 @@ nav {
     }
 }
 
-/* Tablet (768px ke bawah) */
 @media (max-width: 1024px) {
     .grid-row {
         gap: 20px;
@@ -534,7 +512,6 @@ nav {
     }
 }
 
-/* Mobile (768px ke bawah) */
 @media (max-width: 768px) {
     .contributed-grid {
         gap: 20px;
@@ -557,8 +534,8 @@ nav {
     }
     
     .title-contribute {
-        font-size: 20px;
-        padding-top: 100px;
+        font-size: 30px;
+        padding-top: 200px;
         margin-bottom: 40px;
     }
     
@@ -568,7 +545,6 @@ nav {
     }
 }
 
-/* Small Mobile (480px ke bawah) */
 @media (max-width: 480px) {
     .grid-item {
         flex: 0 0 calc(20% - 10px);
@@ -588,9 +564,6 @@ nav {
         font-size: 14px;
     }
 }
-
-
-/* ===== ABOUT SECTION ===== */
 
 #about {
     background-image: url(img/BackgroundVolumetric1.png);
@@ -617,34 +590,28 @@ nav {
     color: white;
     font-family: 'Josefin Sans', sans-serif;
     padding: 0 20px;
-    
-    /* Tetap seperti semula */
-    /* HAPUS flexbox dari sini */
 }
 
-/* Atur layout dengan grid untuk 2 kolom */
 .section-content {
     display: grid;
-    grid-template-columns: 1fr auto; /* Kolom 1 untuk teks, kolom 2 untuk logo */
+    grid-template-columns: 1fr auto;
     align-items: start;
     gap: -10px;
 }
 
-/* Semua elemen teks berada di kolom pertama */
 .section-title1,
 .desc1,
 .desc2 {
     grid-column: 1;
 }
 
-/* Logo di kolom kedua */
 .all-teams {
-    width: 450px; /* Ukuran logo */
+    width: 450px;
     height: auto;
     margin-top: 0;
     grid-column: 2;
-    grid-row: 1 / span 3; /* Logo akan mencakup beberapa baris */
-    align-self: center; /* Tengah secara vertikal */
+    grid-row: 1 / span 3;
+    align-self: center;
     transition: transform 0.3s ease;
 }
 
@@ -661,15 +628,15 @@ nav {
     position: relative;
     padding-bottom: 1px;
     margin-top: 0;
-    width: 100%; /* Ubah dari fit-content ke 100% */
+    width: 100%;
 }
 
 .section-title1::after {
     content: '';
     position: absolute;
-    left: 0; /* Ubah dari 50% ke 0 */
+    left: 0;
     bottom: 0;
-    transform: none; /* Hapus transform */
+    transform: none;
     width: 40%;
     height: 6px;
     background: linear-gradient(90deg, #9522ff, #f85fff);
@@ -694,7 +661,6 @@ nav {
     width: 100%;
 }
 
-/* Responsive design - Penambahan breakpoint */
 @media (max-width: 1200px) {
     .section-content {
         gap: 20px;
@@ -715,10 +681,9 @@ nav {
     }
 }
 
-/* Tablet landscape */
 @media (max-width: 992px) {
     .section-content {
-        grid-template-columns: 1fr; /* 1 kolom untuk tablet */
+        grid-template-columns: 1fr;
         text-align: center;
         gap: 30px;
     }
@@ -727,7 +692,7 @@ nav {
         grid-column: 1;
         grid-row: auto;
         width: 300px;
-        justify-self: center; /* Pusatkan logo */
+        justify-self: center;
         margin-bottom: 20px;
     }
     
@@ -753,7 +718,6 @@ nav {
     }
 }
 
-/* Tablet portrait */
 @media (max-width: 768px) {
     .section-title1 {
         font-size: 60px;
@@ -778,7 +742,6 @@ nav {
     }
 }
 
-/* Mobile landscape */
 @media (max-width: 576px) {
     .section-content {
         padding: 0 15px;
@@ -809,7 +772,6 @@ nav {
     }
 }
 
-/* Mobile portrait */
 @media (max-width: 480px) {
     .section-title1 {
         font-size: 40px;
@@ -832,7 +794,6 @@ nav {
     }
 }
 
-/* Small mobile devices */
 @media (max-width: 375px) {
     .section-title1 {
         font-size: 36px;
@@ -856,7 +817,6 @@ nav {
     }
 }
 
-/* Untuk perangkat dengan tinggi terbatas (landscape mobile) */
 @media (max-height: 600px) and (orientation: landscape) {
     .page-section {
         min-height: auto;
@@ -872,7 +832,6 @@ nav {
     }
 }
 
-/* ===== TEAMS SECTION ===== */
 #teams {
     background-image: url(img/BackgroundVolumetric2.png);
     background-repeat: no-repeat;
@@ -888,7 +847,6 @@ nav {
     position: relative;
 }
 
-/* GANTI NAMA CLASS UNTUK TEAMS SECTION AGAR TIDAK BERTABRAKAN */
 .teams-section-content {
     max-width: 1400px;
     width: 100%;
@@ -897,7 +855,6 @@ nav {
     text-align: center;
 }
 
-/* Judul Section */
 .teams-title {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 4rem;
@@ -923,11 +880,10 @@ nav {
     letter-spacing: 3px;
 }
 
-/* Container untuk Cards - PERUBAHAN UTAMA */
 .teamscard-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Ini yang membuat card selalu di tengah */
+    justify-content: center;
     align-items: flex-start;
     gap: 40px;
     max-width: 1400px;
@@ -935,10 +891,10 @@ nav {
 }
 
 .team-card {
-    flex: 0 0 calc(20% - 40px); /* 5 card per baris (100%/5 = 20%) */
-    max-width: 210px; /* Lebar maksimal tetap */
-    min-width: 210px; /* Lebar minimal tetap */
-    width: 210px; /* Lebar tetap */
+    flex: 0 0 calc(20% - 40px);
+    max-width: 210px;
+    min-width: 210px;
+    width: 210px;
     border-radius: 25px;
     border: 1px solid rgba(255, 255, 255, 0.329);
     background: rgba(255, 255, 255, 0.09);
@@ -1033,11 +989,10 @@ nav {
     transform: scale(1.2);
 }
 
-/* Responsive Design - dengan pendekatan flexbox yang lebih baik */
 @media (max-width: 1400px) {
     .team-card {
-        flex: 0 0 calc(25% - 40px); /* 4 card per baris */
-        max-width: 200px; /* Lebar lebih besar karena lebih sedikit card */
+        flex: 0 0 calc(25% - 40px);
+        max-width: 200px;
         min-width: 200px;
         width: 200px;
     }
@@ -1045,7 +1000,7 @@ nav {
 
 @media (max-width: 1200px) {
     .team-card {
-        flex: 0 0 calc(33.333% - 40px); /* 3 card per baris */
+        flex: 0 0 calc(33.333% - 40px);
         max-width: 220px;
         min-width: 220px;
         width: 220px;
@@ -1067,7 +1022,7 @@ nav {
 
 @media (max-width: 992px) {
     .team-card {
-        flex: 0 0 calc(33.333% - 40px); /* 3 card per baris */
+        flex: 0 0 calc(33.333% - 40px);
         max-width: 200px;
         min-width: 200px;
         width: 200px;
@@ -1097,7 +1052,7 @@ nav {
 
 @media (max-width: 768px) {
     .team-card {
-        flex: 0 0 calc(50% - 40px); /* 2 card per baris */
+        flex: 0 0 calc(50% - 40px);
         max-width: 180px;
         min-width: 180px;
         width: 180px;
@@ -1174,10 +1129,9 @@ nav {
     }
 }
 
-/* Untuk layar sangat kecil (mobile portrait) */
 @media (max-width: 400px) {
     .team-card {
-        flex: 0 0 100%; /* 1 card per baris */
+        flex: 0 0 100%;
         max-width: 100%;
         min-width: unset;
     }
@@ -1201,7 +1155,6 @@ nav {
     }
 }
 
-/* Animasi fade-in untuk cards */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1218,7 +1171,6 @@ nav {
     opacity: 0;
 }
 
-/* Stagger animation untuk cards */
 .team-card:nth-child(1) { animation-delay: 0.1s; }
 .team-card:nth-child(2) { animation-delay: 0.2s; }
 .team-card:nth-child(3) { animation-delay: 0.3s; }
@@ -1230,7 +1182,6 @@ nav {
 .team-card:nth-child(9) { animation-delay: 0.9s; }
 .team-card:nth-child(10) { animation-delay: 1.0s; }
 
-/* ===== SERVICES SECTION ===== */
 #services {
     background-image: url(img/BackgroundVolumetric3.png);
     background-repeat: no-repeat;
@@ -1280,7 +1231,6 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-/* Container untuk Services Cards */
 .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1292,13 +1242,10 @@ nav {
     position: relative;
 }
 
-/* Style dasar untuk semua card services */
 .services-card1 {
     background: transparent;
     border-radius: 50px;
     padding: 30px 30px;
-    flex: 1;
-    width: fit-content;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-align: center;
     position: relative;
@@ -1308,18 +1255,22 @@ nav {
     -webkit-backdrop-filter: blur(8px);
     min-height: 450px;
     display: flex;
-    height: 90%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Card tengah sedikit ke atas */
+.services-container .services-card1:nth-child(3) {
+    width: 100%;
+    grid-column: span 1;
+}
+
 .services-container .services-card1:nth-child(2) {
     transform: translateY(-20px);
 }
 
-/* Efek glow border saat hover */
 .services-card1::before {
     content: '';
     position: absolute;
@@ -1351,7 +1302,10 @@ nav {
     opacity: 1;
 }
 
-/* Efek garis bawah yang bergerak */
+.services-container .services-card1:nth-child(2):hover {
+    transform: translateY(-30px) scale(1.02);
+}
+
 .services-card1::after {
     content: '';
     position: absolute;
@@ -1368,15 +1322,11 @@ nav {
     width: 70%;
 }
 
-/* Card tengah efek hover khusus */
-.services-container .services-card1:nth-child(2):hover {
-    transform: translateY(-30px) scale(1.02);
-}
-
-/* Icon/Image styling */
 .services-card1 img {
     border-radius: 30px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
     background-size: cover;
     margin-bottom: 30px;
     transition: all 0.4s ease;
@@ -1388,7 +1338,6 @@ nav {
     filter: drop-shadow(0 8px 25px rgba(149, 34, 255, 0.4));
 }
 
-/* Title styling */
 .services-cr-title {
     font-size: 1.8rem;
     font-weight: 700;
@@ -1402,13 +1351,11 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Efek teks glow */
 .services-card1:hover .services-cr-title {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     color: white;
 }
 
-/* Description styling */
 .desc-services {
     font-size: 1rem;
     text-align: left;
@@ -1418,6 +1365,7 @@ nav {
     font-weight: 500;
     margin-bottom: 20px;
     margin-top: 15px;
+    width: 100%;
 }
 
 .desc-services1 {
@@ -1429,10 +1377,14 @@ nav {
     font-weight: 500;
     margin-bottom: 20px;
     margin-top: 15px;
+    width: 100%;
 }
 
 .all-services-list {
     list-style-type: disc;
+    padding-left: 20px;
+    width: 100%;
+    text-align: left;
 }
 
 .list-services{
@@ -1441,6 +1393,7 @@ nav {
     line-height: 1.7;
     text-align: left;
     font-weight: 400;
+    width: 100%;
 }
 
 .list-services span {
@@ -1451,7 +1404,6 @@ nav {
     color: white;
 }
 
-/* Animasi fade-in untuk cards */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -1468,20 +1420,15 @@ nav {
     opacity: 0;
 }
 
-/* Stagger animation untuk cards */
 .services-card1:nth-child(1) { animation-delay: 0.1s; }
 .services-card1:nth-child(2) { animation-delay: 0.2s; }
 .services-card1:nth-child(3) { animation-delay: 0.3s; }
 
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Tablet Landscape (1024px ke bawah) */
 @media screen and (max-width: 1024px) {
     .services-container {
         gap: 25px;
         max-width: 900px;
+        grid-template-columns: repeat(3, 1fr);
     }
     
     .services-card1 {
@@ -1490,8 +1437,12 @@ nav {
         border-radius: 40px;
     }
     
-    .services-card1 img {
+    .services-container .services-card1:nth-child(3) {
         width: 100%;
+        grid-column: span 1;
+    }
+    
+    .services-card1 img {
         max-width: 280px;
         margin-bottom: 25px;
     }
@@ -1510,7 +1461,6 @@ nav {
     }
 }
 
-/* Tablet Portrait (768px ke bawah) */
 @media screen and (max-width: 768px) {
     #services {
         padding: 70px 0;
@@ -1532,18 +1482,17 @@ nav {
         max-width: 100%;
     }
     
-    /* Atur posisi card agar sejajar */
+    .services-container .services-card1:nth-child(3) {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        justify-self: center;
+    }
+    
     .services-container .services-card1 {
         transform: translateY(0) !important;
         align-self: stretch;
-    }
-    
-    /* Jika ada 3 card, buat card ketiga berada di tengah di baris kedua */
-    .services-container .services-card1:nth-child(3) {
-        grid-column: 1 / -1;
-        justify-self: center;
-        max-width: 400px;
-        width: 100%;
     }
     
     .services-card1 {
@@ -1556,7 +1505,6 @@ nav {
     }
     
     .services-card1 img {
-        width: 100%;
         max-width: 220px;
         margin: 0 auto 20px;
     }
@@ -1578,7 +1526,6 @@ nav {
     }
 }
 
-/* Mobile (600px ke bawah) */
 @media screen and (max-width: 600px) {
     #services {
         padding: 60px 0;
@@ -1597,10 +1544,10 @@ nav {
         margin: 0 auto;
     }
     
-    /* Reset grid column untuk semua card */
-    .services-container .services-card1 {
-        grid-column: auto;
+    .services-container .services-card1:nth-child(3) {
+        grid-column: 1;
         max-width: 100%;
+        width: 100%;
     }
     
     .services-card1 {
@@ -1612,13 +1559,7 @@ nav {
         margin: 0 auto;
     }
     
-    /* Berikan margin bottom yang konsisten untuk semua card */
-    .services-container .services-card1:not(:last-child) {
-        margin-bottom: 0;
-    }
-    
     .services-card1 img {
-        width: 100%;
         max-width: 200px;
         margin: 0 auto 20px;
     }
@@ -1633,6 +1574,7 @@ nav {
         margin-bottom: 15px;
         margin-top: 10px;
         line-height: 1.5;
+        text-align: center;
     }
     
     .desc-services1,
@@ -1640,9 +1582,15 @@ nav {
         font-size: 0.75rem;
         margin-bottom: 15px;
         line-height: 1.6;
+        text-align: center;
     }
     
-    /* Optimalkan hover effects untuk mobile */
+    .all-services-list {
+        text-align: center;
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    
     .services-card1:hover {
         transform: translateY(-5px) scale(1.02);
     }
@@ -1652,7 +1600,6 @@ nav {
     }
 }
 
-/* Small Mobile (480px ke bawah) */
 @media screen and (max-width: 480px) {
     #services {
         padding: 50px 0;
@@ -1674,8 +1621,10 @@ nav {
     
     .services-card1 {
         min-height: auto;
-        margin-left: -20px;
+        padding: 20px 15px;
         border-radius: 25px;
+        width: 100%;
+        margin-left: 0;
     }
     
     .services-card1 img {
@@ -1700,13 +1649,8 @@ nav {
         line-height: 1.5;
         margin-bottom: 12px;
     }
-    
-    .all-services-list {
-        padding-left: 20px;
-    }
 }
 
-/* Extra Small Mobile (360px ke bawah) */
 @media screen and (max-width: 360px) {
     #services {
         padding: 40px 0;
@@ -1752,16 +1696,12 @@ nav {
     }
 }
 
-/* ===== PARTNERS SECTION ===== */
-
-/* Grid Container */
 .contributed-grid {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-/* Grid Row */
 .grid-row1 {
     display: flex;
     justify-content: center;
@@ -1769,7 +1709,6 @@ nav {
     flex-wrap: nowrap;
 }
 
-/* Grid Item */
 .grid-item1 {
     flex: 1;
     max-width: 150px;
@@ -1785,7 +1724,6 @@ nav {
     transform: translateY(-15px);
 }
 
-/* Grid Image */
 .grid-image1 {
     width: 100%;
     height: auto;
@@ -1794,9 +1732,6 @@ nav {
     transition: all 0.4s ease;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-
-/* Tablet Landscape (1024px ke bawah) */
 @media screen and (max-width: 1024px) {
     .grid-row1 {
         gap: 60px;
@@ -1812,7 +1747,6 @@ nav {
     }
 }
 
-/* Tablet Portrait (768px ke bawah) */
 @media screen and (max-width: 768px) {
     .grid-row1 {
         gap: 40px;
@@ -1827,7 +1761,6 @@ nav {
     }
 }
 
-/* Mobile (600px ke bawah) */
 @media screen and (max-width: 600px) {
     .grid-row1 {
         gap: 30px;
@@ -1845,7 +1778,6 @@ nav {
     }
 }
 
-/* Mobile (480px ke bawah) */
 @media screen and (max-width: 480px) {
     .grid-row1 {
         gap: 25px;
@@ -1864,7 +1796,6 @@ nav {
     }
 }
 
-/* Small Mobile (360px ke bawah) */
 @media screen and (max-width: 360px) {
     .grid-row1 {
         gap: 20px;
@@ -1882,7 +1813,6 @@ nav {
     }
 }
 
-/* Extra Small Mobile (320px ke bawah) */
 @media screen and (max-width: 320px) {
     .grid-row1 {
         gap: 15px;
@@ -1895,8 +1825,6 @@ nav {
         border-radius: 12px;
     }
 }
-
-/* ===== CONTACTS SECTION ===== */
 
 #contacts {
     background-image: linear-gradient(0deg, #010002, #01000200);
@@ -1954,18 +1882,15 @@ nav {
     -webkit-text-fill-color: transparent;
 }
 
-/* Metode Flexbox */
 .container-two-columns {
     display: flex;
-    gap: 50px; /* Jarak antara kolom */
-    justify-content: space-between; /* Atau "space-around" atau "center" */
+    gap: 50px;
+    justify-content: space-between;
     width: 100%;
 }
 
 .content1-contacts {
-    flex: 1; /* Membagi ruang sama rata */
-    /* Atau gunakan width tertentu jika perlu */
-    /* width: 48%; */
+    flex: 1;
 }
 
 .content1-contacts {
@@ -1980,6 +1905,7 @@ nav {
 
 .content1-title {
     text-transform: uppercase;
+    line-height: 1.2;
     color: white;
 }
 
@@ -2003,11 +1929,11 @@ nav {
     padding: 8px 13px;
     color: #010002;
     transition: transform 0.3s ease;
-    display: inline-block; /* Tambahkan ini */
+    display: inline-block;
 }
 
 .discord-btn:hover {
-    transform: scale(0.95); /* Ubah 5 menjadi 1.1 (membesar 10%) */
+    transform: scale(0.95);
 }
 
 .socialmedia-grid {
@@ -2031,25 +1957,24 @@ nav {
     width: 48%;
     border-radius: 25px;
     display: flex;
-    flex-direction: column; /* Ini kunci utamanya */
-    justify-content: center; /* Pusatkan konten secara vertikal */
-    align-items: center; /* Pusatkan konten secara horizontal */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding: 20px 20px; /* Tambahkan padding untuk ruang */
-    box-sizing: border-box; /* Pastikan padding tidak menambah width */
+    padding: 20px 20px;
+    box-sizing: border-box;
 }
 
 .content2-contacts table {
     width: 80%;
-    margin-bottom: -100px; /* Jarak antara tabel dan copyright */
+    margin-bottom: -100px;
 }
 
 .content2-contacts table tr td {
     text-align: left;
-    padding: 10px 0; /* Tambahkan sedikit padding vertikal untuk sel */
+    padding: 10px 0;
 }
 
-/* Style untuk title, button, dan link table tetap sama */
 .title-table {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 800;
@@ -2092,11 +2017,9 @@ nav {
     width: 80%;
     font-size: 15px;
     font-weight: 400;
-    margin-top: auto; /* Ini akan push copyright ke bawah */
+    margin-top: auto;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
-/* Tablet (768px ke bawah) */
 @media screen and (max-width: 768px) {
     .container-two-columns {
         flex-direction: column;
@@ -2135,7 +2058,6 @@ nav {
     }
 }
 
-/* Mobile (480px ke bawah) */
 @media screen and (max-width: 480px) {
     .contacts-section {
         padding: 50px 15px;
@@ -2203,7 +2125,6 @@ nav {
     }
 }
 
-/* Small Mobile (360px ke bawah) */
 @media screen and (max-width: 360px) {
     .contacts-section {
         padding: 40px 10px;
@@ -2228,7 +2149,6 @@ nav {
     }
 }
 
-/* ===== HAMBURGER MENU ===== */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -2257,7 +2177,6 @@ nav {
     }
 }
 
-/* Active state for hamburger menu */
 .hamburger.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(6px, 6px);
 }
@@ -2270,7 +2189,6 @@ nav {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* ===== BLUR EFFECT FOR NAVIGATION ON SCROLL ===== */
 nav.scrolled {
     background: #ffffff15 !important;
     backdrop-filter: blur(9px) !important;
@@ -2290,12 +2208,10 @@ nav.scrolled .hamburger .bar {
     background-color: white;
 }
 
-/* Ensure smooth scrolling accounts for fixed nav */
 html {
     scroll-padding-top: 80px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1400px) {
     nav {
         padding: 0 200px;
@@ -2403,7 +2319,6 @@ html {
         background-color: rgba(255, 0, 110, 0.8);
     }
     
-    /* Hero content mobile adjustments */
     .hero-content {
         position: relative;
         top: auto;
